@@ -1,0 +1,13 @@
+<%= form_with model: @post, url: posts_url, method: :post, data: { turbo: false } do |f| %>
+  <div>
+    <%= f.label :title, "Title" %>
+    <%= f.text_field :title, autofocus: true %>
+  </div>
+
+  <div>
+    <%= f.label :body, "Body" %>
+    <%= f.text_area :body, autofocus: true %>
+  </div>
+
+  <%= f.submit "Create" %>
+<% end %>
