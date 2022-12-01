@@ -1,5 +1,5 @@
 class PostPolicy < ApplicationPolicy
-  def delete?
+  def destroy?
     user.author?(record)
   end
 end
